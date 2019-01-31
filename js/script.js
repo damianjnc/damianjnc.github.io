@@ -46,11 +46,31 @@ $(document).ready(function () {
       }
   }); 
 
+	// Animations
+var windowH = $(window).height();
+
+$(window).bind('resize', function () {
+		windowH = $(window).height();
+});
+
 
 var skillTopOffset = $(".skillsSection").offset().top;
 var statsTopOffset = $(".statsSection").offset().top;
 var countUpFinished = false;
 $(window).scroll(function(){
+
+   // Fixed Navbar
+		if(window.pageYOffset > windowH)
+		{
+			$('.navbar-flat').addClass('navbar-fixed-top');
+
+		}
+		else
+		{
+			$('.navbar-flat').removeClass('navbar-fixed-top');
+	
+      }
+      
    if(window.pageYOffset > skillTopOffset - $(window).height() + 200){
       $('.chart').easyPieChart({
          // options go here
@@ -94,6 +114,13 @@ $(window).scroll(function(){
          }
       });
      return false;
+   });
+
+   $("#navbarUl a").click(function(){
+      $("#navbarUl .active").removeClass("active");
+      $(this).addClass("active");
+
+      return false;
    });
 
 
