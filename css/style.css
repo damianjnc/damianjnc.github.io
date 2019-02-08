@@ -251,6 +251,11 @@ margin:0;
    opacity: 1;
 }
 
+.projectLink2 {
+   margin-top: 10px;
+   margin-right: 25px;
+}
+
 .items .openButton {
    float: left;
    left: -200px;
@@ -260,6 +265,7 @@ margin:0;
    float: right;
    right: -200px;
 }
+
 
 .items .item:hover .openButton {
    left: 0px;
