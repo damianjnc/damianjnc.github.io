@@ -20,7 +20,7 @@ $(document).ready(function () {
    });
 
    var typed = new Typed(".typed", {
-      strings: ["Web Developer.",  "Blockchain Engineer.", "JavaScript ES5/ES6 Developer."],
+      strings: ["React/Redux Developer.",  "Blockchain Developer.", "JavaScript ES6+ Developer."],
       typeSpeed: 70,
       loop: true,
       startDelay: 1000, 
